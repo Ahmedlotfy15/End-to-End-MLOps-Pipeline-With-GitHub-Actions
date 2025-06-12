@@ -16,7 +16,7 @@ jobs:
 
 
             - name: Building images
-              run: docker build -t ahmedlotfy15/usercls_image:latest .
+              run: docker build -t ahmedlotfi15/usercls_image:latest .
 
 
             - name: login to docker hub
@@ -24,6 +24,6 @@ jobs:
 
 
             - name: push images
-              run: docker push ahmedlotfy15/usercls_image:latest
+              run: docker push ahmedlotfi15/usercls_image:latest
             
             
