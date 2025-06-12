@@ -1,0 +1,7 @@
+data
+env 
+gitignore
+Dockerfile
+.gitattributes
+notebooks\365data-sciene-user-classification-97.ipynb
+
