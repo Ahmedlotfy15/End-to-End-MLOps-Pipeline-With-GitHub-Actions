@@ -1,0 +1,29 @@
+name: Second Workflow
+
+on:
+    push:
+        branches:
+            - main
+    
+    workflow_dispatch:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: cloning repository
+              uses: actions/checkout@v3
+
+
+            - name: Building images
+              run: docker build -t ahmedlotfy15/usercls_image:latest .
+
+
+            - name: login to docker hub
+              run: docker login -u ahmedlotfi15 -p ${{ secrets.USERCLS_IMAGE}}
+
+
+            - name: push images
+              run: docker push ahmedlotfy15/usercls_image:latest
+            
+            
